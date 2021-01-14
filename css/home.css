@@ -62,7 +62,7 @@ nav.menu-bar li a:hover{
     filter: grayscale(0%);
 }
 .main-text{
-    display: flex;
+    display: block;
     text-shadow: 2px 2px 2px rgb(79, 255, 146); 
     margin-top: 220px; 
     font-size: 8rem; 
