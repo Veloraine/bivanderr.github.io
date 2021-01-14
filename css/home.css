@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Do Hyeon', sans-serif;
+}
+header{
+    width:100%;
+    height: 100%;
+    background: linear-gradient(45deg,#F17C58, rgb(134, 173, 14),rgb(6, 82, 97) , rgb(77, 6, 97),rgb(176, 0, 3), black);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+nav.menu-bar ul{
+    list-style-type: none;
+    font-size: 20px;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    display: inline-flex;
+    top: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #ffffff;
+    z-index: +1;
+}
+nav.menu-bar li a{
+    text-align: center;
+    display: block;
+    color: rgb(79, 255, 146);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    padding: 22px 28px;
+}
+nav.menu-bar li a:hover{
+    border-bottom: 1px solid white;
+    color:white;
+}
+.main-mascot{
+    margin: 60px 40px 0 auto;
+    animation: fade 1.5s;
+}
+.top-icon{
+    display:block; 
+    width: 50px;
+    margin-right: auto;
+    padding: 10px 10px 10px 20px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.top-icon:hover{
+    transition: 0.5s;
+    filter: grayscale(0%);
+}
+.main-text{
+    display: flex;
+    text-shadow: 2px 2px 2px rgb(79, 255, 146); 
+    margin-top: 220px; 
+    font-size: 8rem; 
+    margin-left: 110px;
+}
+.quotes{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    border-right: 3px solid white;
+    width: 24ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(60), blinking .75s step-end infinite;
+    padding-left: 20px;
+}
+.landing{
+    display: flex; 
+    width: 100%;
+}
+.big-box{
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(79, 255, 146);
+    width: 90%;
+    padding: 50px 0 0 0;
+    margin: 80px auto;
+    text-align: center;
+}
+.mini-box{
+    border-top: 4px solid white;
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: justify;
+    font-size: 1.3rem;
+    color: white;
+    padding: 20px;
+    margin: 120px 50px 20px 50px;
+    width: 650px;
+}
+.mini-box p{
+    padding-left: 20px;
+    border-left: 2px solid white;
+}
+.mini-box2{
+    text-shadow: 5px 5px 1px rgb(79, 255, 146);
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    padding: 20px;
+    margin: 50px 0px 20px 50px;
+    width: 300px;
+}
+.box{
+    position: relative;
+    margin: 15px;
+    padding: 10px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(20px);
+}
+.box:before,
+.box:after{
+    background: linear-gradient(235deg, rgb(79, 255, 146),black, black, cyan);
+}
+.bouncer{
+    animation: bounce 3s ease infinite;
+}
+.next-page{
+    background-color: transparent;
+    border: 2px solid rgb(79, 255, 146);
+    color: rgb(79, 255, 146);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    transition: 1s;
+}
+.next-page:hover{
+    background-color: rgb(79, 255, 146);
+    color: black;
+}
+@keyframes typing{
+    from { width: 0ch }
+    to { width: 24ch }
+}
+@keyframes blinking{
+    from, to { border-color: transparent }
+    25% { border-color:  rgb(79, 255, 146); }
+}
+@keyframes fade{
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+@keyframes gradient{
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+@keyframes bounce{
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
